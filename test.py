@@ -37,7 +37,7 @@ pred = output.view(n_frames)
 l = loss(pred, target)
 print('net output:', output[:50])
 print('target:', target[:50])
-print('mean:', ((target - output) ** 2).mean())
+print('mean:', ((target - pred) ** 2).mean())
 print('loss:', l)
 
 # When everything is done, release the capture
